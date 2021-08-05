@@ -18,9 +18,10 @@ This syntax will let you manually create a new `Post` record with `title` and
 `description` attributes. After running the `save` method in the console, you
 will see output similar to the following:
 
-```shell
+```txt
  (0.1ms)  begin transaction
-SQL (0.3ms)  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title Goes Here"], ["description", "Desc goes here..."], ["created_at", "2015-11-23 22:26:43.799742"], ["updated_at", "2015-11-23 22:26:43.799742"]]
+SQL (0.3ms) INSERT INTO "posts" ("title", "description", "created_at", "updated_at")
+VALUES (?, ?, ?, ?)  [["title", "Title Goes Here"], ["description", "Desc goes here..."], ["created_at", "2015-11-23 22:26:43.799742"], ["updated_at", "2015-11-23 22:26:43.799742"]]
  (1.2ms)  commit transaction
 => true
 ```
@@ -91,7 +92,8 @@ There are a couple of ways to check:
 
 ```shell
  (0.1ms)  begin transaction
-SQL (0.7ms)  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "My Post"], ["description", "My desc"], ["created_at", "2015-12-26 18:00:31.393419"], ["updated_at", "2015-12-26 18:00:31.393419"]]
+SQL (0.7ms)  INSERT INTO "posts" ("title", "description", "created_at", "updated_at")
+VALUES (?, ?, ?, ?)  [["title", "My Post"], ["description", "My desc"], ["created_at", "2015-12-26 18:00:31.393419"], ["updated_at", "2015-12-26 18:00:31.393419"]]
  (2.2ms)  commit transaction
 ```
 
@@ -124,4 +126,5 @@ All our tests should be passing now, and the site is working in the browser.
 Users are able to create records in the database using the HTML form, and, upon
 submitting a new post, they're automatically redirected to the `show` page for
 the post they just created. In future lessons, we'll refactor this further to
-incorporate awesome Rails components like `strong parameters` and `error handling`, but don't worry about those yet. Great job!
+incorporate awesome Rails components like `strong parameters` and
+`error handling`, but don't worry about those yet. Great job!
